@@ -1,14 +1,14 @@
 # Laravel Yourls Plugin
-
+[![For Laravel 5][badge_laravel]](https://github.com/phpsa/laravel-api-controller/issue)
 [![Build Status](https://travis-ci.org/phpsa/laravel-yourls-plugin.svg?branch=master)](https://travis-ci.org/phpsa/laravel-yourls-plugin)
 [![styleci](https://styleci.io/repos/196083755/shield)](https://styleci.io/repos/196083755)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5ca6f28b-a0b2-4c04-af16-e1e6c9d21498/mini.png)](https://insight.sensiolabs.com/projects/5ca6f28b-a0b2-4c04-af16-e1e6c9d21498)
 [![Coverage Status](https://coveralls.io/repos/github/phpsa/laravel-yourls-plugin/badge.svg?branch=master)](https://coveralls.io/github/phpsa/laravel-yourls-plugin?branch=master)
 
 [![Packagist](https://img.shields.io/packagist/v/phpsa/laravel-yourls-plugin.svg)](https://packagist.org/packages/phpsa/laravel-yourls-plugin)
 [![Packagist](https://poser.pugx.org/phpsa/laravel-yourls-plugin/d/total.svg)](https://packagist.org/packages/phpsa/laravel-yourls-plugin)
 [![Packagist](https://img.shields.io/packagist/l/phpsa/laravel-yourls-plugin.svg)](https://packagist.org/packages/phpsa/laravel-yourls-plugin)
+[![Github Issues][badge_issues]](https://github.com/phpsa/laravel-api-controller/issue)
 
 Package description: Plugin which integrates Laravel with Yourls (Your Own URL Shortener).
 
@@ -149,3 +149,7 @@ instead of using the issue tracker.
 
 - [Craig Smith](https://github.com/phpsa)
 - [All contributors](https://github.com/phpsa/laravel-yourls-plugin/graphs/contributors)
+
+
+[badge_laravel]:   https://img.shields.io/badge/Laravel-5.8%20to%205.8-orange.svg?style=flat-square
+[badge_issues]:    https://img.shields.io/github/issues/ARCANEDEV/Support.svg?style=flat-square
