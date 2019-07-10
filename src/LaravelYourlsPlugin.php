@@ -3,7 +3,6 @@
 namespace Phpsa\LaravelYourlsPlugin;
 
 use GuzzleHttp\Client;
-use Phpsa\LaravelYourlsPlugin\Response;
 
 class LaravelYourlsPlugin
 {
@@ -51,7 +50,7 @@ class LaravelYourlsPlugin
     /**
      * Last request.
      *
-     * @var \stdClass
+     * @var Request
      */
     protected $lastResponse;
 
@@ -143,7 +142,7 @@ class LaravelYourlsPlugin
         $params = [
             'action' => 'url-stats',
             'shorturl' => $shorturl,
-            'format' => $this->setFormat($format)
+            'format' => $this->setFormat($format),
         ];
 
         return $this->process($params);
@@ -159,12 +158,12 @@ class LaravelYourlsPlugin
      */
     public function stats(string $filter = null, int $limit = null, string $format = null)
     {
-        $filter = empty($filter) || !in_array($filter, $this->filters) ? $this->filter : $filter;
+        $filter = empty($filter) || ! in_array($filter, $this->filters) ? $this->filter : $filter;
 
         $params = [
             'action' => 'stats',
             'filter' => $filter,
-            'format' => $this->setFormat($format)
+            'format' => $this->setFormat($format),
         ];
         if (! empty($limit)) {
             $params = array_merge($params, ['limit' => $limit]);
@@ -184,7 +183,7 @@ class LaravelYourlsPlugin
 
         $params = [
             'action' => 'db-stats',
-            'format' => $this->setFormat($format)
+            'format' => $this->setFormat($format),
         ];
 
         return $this->process($params);
@@ -205,7 +204,7 @@ class LaravelYourlsPlugin
         $form_params = array_merge($request, $this->authParam);
 
         $result = $this->client->request('POST', 'yourls-api.php', ['form_params' => $form_params]);
-        if(!$result || '200' != $result->getStatusCode()) {
+        if(! $result || '200' != $result->getStatusCode()) {
             throw new \Exception('Failed to process request');
         }
 
@@ -214,13 +213,12 @@ class LaravelYourlsPlugin
 
         return $this->lastResponse;
 
-
     }
 
     /**
      * Returns the result of the last request in.
      *
-     * @return string|\stdClass
+     * @return Response
      */
     public function getLastResponse()
     {

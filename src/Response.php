@@ -2,22 +2,25 @@
 
 namespace Phpsa\LaravelYourlsPlugin;
 
-class Response {
+class Response
+{
 
-     /**
-     * status of the server response - fail is not nessisary a fail in this case
+    /**
+     * status of the server response - fail is not nessisary a fail in this case.
      *
      * @var string
      */
-    public $statusCode;
+    public $status;
+
     /**
-     * status code of the server response
+     * status code of the server response.
      *
      * @var int
      */
     public $statusCode;
+
     /**
-     * message from the response
+     * message from the response.
      *
      * @var string
      * @author Craig Smith <craig.smith@customd.com>
@@ -25,7 +28,8 @@ class Response {
     public $message;
 
 
-    public function __construct($body, $format){
+    public function __construct($body, $format)
+    {
         switch ($format) {
             case 'xml':
                 libxml_use_internal_errors(true);
@@ -44,19 +48,20 @@ class Response {
         $this->parseResponseBody($res);
     }
 
-    protected function parseResponseBody($body){
+    protected function parseResponseBody($body)
+    {
         if(empty($body)){
-                throw new \Exception("No response recieved");
+            throw new \Exception("No response recieved");
         }
 
-        if(\is_string($body) ){
+        if( \is_string($body)){
             $this->status = 'success';
             $this->statusCode = '200';
             $this->shorturl = $url;
             return;
         }
 
-        foreach((array)$body as $key => $value){
+        foreach( (array) $body as $key => $value){
             $this->{$key} = $value;
         }
 
