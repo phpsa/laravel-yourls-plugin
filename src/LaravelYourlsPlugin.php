@@ -108,6 +108,7 @@ class LaravelYourlsPlugin
             $params['keyword'] = $keyword;
         }
         $body = $this->process($params);
+
         return $body->shorturl;
     }
 
@@ -138,7 +139,6 @@ class LaravelYourlsPlugin
      */
     public function urlStats(string $shorturl, string $format = null)
     {
-
         $params = [
             'action' => 'url-stats',
             'shorturl' => $shorturl,
@@ -180,7 +180,6 @@ class LaravelYourlsPlugin
      */
     public function dbStats(string $format = null)
     {
-
         $params = [
             'action' => 'db-stats',
             'format' => $this->setFormat($format),
@@ -211,7 +210,6 @@ class LaravelYourlsPlugin
         $this->lastResponse = new Response($body, $request['format']);
 
         return $this->lastResponse;
-
     }
 
     /**
@@ -231,7 +229,7 @@ class LaravelYourlsPlugin
      *
      * @return string
      */
-    protected function setFormat(string $format = NULL)
+    protected function setFormat(string $format = null)
     {
         return empty($format) || ! in_array($format, $this->formats) ? $this->format : $format;
     }

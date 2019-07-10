@@ -4,7 +4,6 @@ namespace Phpsa\LaravelYourlsPlugin;
 
 class Response
 {
-
     /**
      * status of the server response - fail is not nessisary a fail in this case.
      *
@@ -26,7 +25,6 @@ class Response
      * @author Craig Smith <craig.smith@customd.com>
      */
     public $message;
-
 
     public function __construct($body, $format)
     {
@@ -50,7 +48,7 @@ class Response
 
     protected function parseResponseBody($body)
     {
-        if(empty($body)) {
+        if (empty($body)) {
             throw new \Exception('No response recieved');
         }
 
@@ -65,7 +63,5 @@ class Response
         foreach ((array) $body as $key => $value) {
             $this->{$key} = $value;
         }
-
     }
-
 }
