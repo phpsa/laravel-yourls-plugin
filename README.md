@@ -1,7 +1,7 @@
 # Laravel Yourls Plugin
 
 [![Build Status](https://travis-ci.org/phpsa/laravel-yourls-plugin.svg?branch=master)](https://travis-ci.org/phpsa/laravel-yourls-plugin)
-[![styleci](https://styleci.io/repos/CHANGEME/shield)](https://styleci.io/repos/CHANGEME)
+[![styleci](https://styleci.io/repos/196083755/shield)](https://styleci.io/repos/196083755)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/CHANGEME/mini.png)](https://insight.sensiolabs.com/projects/CHANGEME)
 [![Coverage Status](https://coveralls.io/repos/github/phpsa/laravel-yourls-plugin/badge.svg?branch=master)](https://coveralls.io/github/phpsa/laravel-yourls-plugin?branch=master)
