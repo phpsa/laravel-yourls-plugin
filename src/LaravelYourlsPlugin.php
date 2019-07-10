@@ -23,14 +23,14 @@ class LaravelYourlsPlugin
     /**
      * Available file formats to comunicate with Yourls API.
      *
-     * @var string
+     * @var array
      */
     private $formats = ['json', 'xml', 'simple'];
 
     /**
      * Available filters for statistics.
      *
-     * @var string
+     * @var array
      */
     private $filters = ['top', 'bottom', 'rand', 'last'];
 
@@ -50,7 +50,7 @@ class LaravelYourlsPlugin
     /**
      * Last request.
      *
-     * @var Request
+     * @var Response
      */
     protected $lastResponse;
 
@@ -200,16 +200,15 @@ class LaravelYourlsPlugin
      */
     protected function process(array $request)
     {
-        $format = $request['format'];
         $form_params = array_merge($request, $this->authParam);
 
         $result = $this->client->request('POST', 'yourls-api.php', ['form_params' => $form_params]);
-        if(! $result || '200' != $result->getStatusCode()) {
+        if (! $result || '200' != $result->getStatusCode()) {
             throw new \Exception('Failed to process request');
         }
 
         $body = $result->getBody();
-        $this->lastResponse = new Response($body);
+        $this->lastResponse = new Response($body, $request['format']);
 
         return $this->lastResponse;
 
@@ -226,13 +225,14 @@ class LaravelYourlsPlugin
     }
 
     /**
-     * checks the format is of a correct value else defaults to the default format
+     * checks the format is of a correct value else defaults to the default format.
      *
      * @param string $format
      *
      * @return string
      */
-    protected function setFormat(string $format = NULL){
-        return empty($format) || !in_array($format, $this->formats) ? $this->format: $format;
+    protected function setFormat(string $format = NULL)
+    {
+        return empty($format) || ! in_array($format, $this->formats) ? $this->format : $format;
     }
 }

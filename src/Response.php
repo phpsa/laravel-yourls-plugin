@@ -50,18 +50,19 @@ class Response
 
     protected function parseResponseBody($body)
     {
-        if(empty($body)){
-            throw new \Exception("No response recieved");
+        if(empty($body)) {
+            throw new \Exception('No response recieved');
         }
 
-        if( \is_string($body)){
+        if (\is_string($body)) {
             $this->status = 'success';
             $this->statusCode = '200';
             $this->shorturl = $url;
+
             return;
         }
 
-        foreach( (array) $body as $key => $value){
+        foreach ((array) $body as $key => $value) {
             $this->{$key} = $value;
         }
 
