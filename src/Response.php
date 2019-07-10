@@ -54,8 +54,8 @@ class Response
 
         if (\is_string($body)) {
             $this->status = 'success';
-            $this->statusCode = '200';
-            $this->shorturl = $url;
+            $this->statusCode = 200;
+            $this->shorturl = $body;
 
             return;
         }
