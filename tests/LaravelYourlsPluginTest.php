@@ -2,9 +2,9 @@
 
 namespace Phpsa\LaravelYourlsPlugin\Tests;
 
-use Phpsa\LaravelYourlsPlugin\Facades\LaravelYourlsPlugin;
-use Phpsa\LaravelYourlsPlugin\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Phpsa\LaravelYourlsPlugin\ServiceProvider;
+use Phpsa\LaravelYourlsPlugin\Facades\LaravelYourlsPlugin;
 
 class LaravelYourlsPluginTest extends TestCase
 {
