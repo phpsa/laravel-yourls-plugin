@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/phpsa/laravel-yourls-plugin.svg?branch=master)](https://travis-ci.org/phpsa/laravel-yourls-plugin)
 [![styleci](https://styleci.io/repos/196083755/shield)](https://styleci.io/repos/196083755)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/phpsa/laravel-yourls-plugin/?branch=master)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/CHANGEME/mini.png)](https://insight.sensiolabs.com/projects/CHANGEME)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5ca6f28b-a0b2-4c04-af16-e1e6c9d21498/mini.png)](https://insight.sensiolabs.com/projects/5ca6f28b-a0b2-4c04-af16-e1e6c9d21498)
 [![Coverage Status](https://coveralls.io/repos/github/phpsa/laravel-yourls-plugin/badge.svg?branch=master)](https://coveralls.io/github/phpsa/laravel-yourls-plugin?branch=master)
 
 [![Packagist](https://img.shields.io/packagist/v/phpsa/laravel-yourls-plugin.svg)](https://packagist.org/packages/phpsa/laravel-yourls-plugin)
