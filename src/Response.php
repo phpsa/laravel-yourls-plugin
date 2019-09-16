@@ -32,6 +32,7 @@ class Response
             case 'xml':
                 libxml_use_internal_errors(true);
                 $res = simplexml_load_string((string) $body);
+
                 if ($res) {
                     $res = json_decode(json_encode($res));
                 }
