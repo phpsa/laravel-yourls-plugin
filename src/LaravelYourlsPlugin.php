@@ -40,6 +40,7 @@ class LaravelYourlsPlugin
      * @var string
      */
     public $format = 'json';
+
     /**
      * Response filter for stats.
      *
@@ -77,12 +78,12 @@ class LaravelYourlsPlugin
     {
         if ($config['signature']) {
             return ['signature' => $config['signature']];
-        } else {
-            return [
-                'username' => $config['username'],
-                'password' => $config['password'],
-            ];
         }
+
+        return [
+            'username' => $config['username'],
+            'password' => $config['password'],
+        ];
     }
 
     /**
@@ -101,9 +102,11 @@ class LaravelYourlsPlugin
             'url' => $url,
             'format' => $this->setFormat($format),
         ];
+
         if ($title) {
             $params['title'] = $title;
         }
+
         if ($keyword) {
             $params['keyword'] = $keyword;
         }
@@ -165,6 +168,7 @@ class LaravelYourlsPlugin
             'filter' => $filter,
             'format' => $this->setFormat($format),
         ];
+
         if (! empty($limit)) {
             $params = array_merge($params, ['limit' => $limit]);
         }
@@ -202,6 +206,7 @@ class LaravelYourlsPlugin
         $form_params = array_merge($request, $this->authParam);
 
         $result = $this->client->request('POST', 'yourls-api.php', ['form_params' => $form_params]);
+
         if (! $result || '200' != $result->getStatusCode()) {
             throw new \Exception('Failed to process request');
         }

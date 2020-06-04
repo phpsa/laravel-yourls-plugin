@@ -22,6 +22,6 @@ class LaravelYourlsPluginTest extends TestCase
 
     public function testExample()
     {
-        $this->assertEquals(1, 1);
+        $this->assertSame(1, 1);
     }
 }
