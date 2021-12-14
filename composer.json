@@ -1,6 +1,6 @@
 {
-  "name": "razorsheep/laravel-yourls-plugin",
-  "description": "Plugin which integrates Laravel with Yourls (Your Own URL Shortener). Thanks to Craig Smith.",
+  "name": "phpsa/laravel-yourls-plugin",
+  "description": "Plugin which integrates Laravel with Yourls (Your Own URL Shortener).",
   "license": "MIT",
   "keywords": [
     "laravel",
@@ -26,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Razorsheep\\LaravelYourlsPlugin\\": "src"
+      "Phpsa\\LaravelYourlsPlugin\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Razorsheep\\LaravelYourlsPlugin\\Tests\\": "tests"
+      "Phpsa\\LaravelYourlsPlugin\\Tests\\": "tests"
     },
     "files": [
       "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
@@ -43,7 +43,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Razorsheep\\LaravelYourlsPlugin\\ServiceProvider"
+        "Phpsa\\LaravelYourlsPlugin\\ServiceProvider"
       ]
     }
   },
